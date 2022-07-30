@@ -38,17 +38,6 @@ BMAG = "\x1B[45m"
 BCYN = "\x1B[46m"
 BWHT = "\x1B[47m"
 
-def clear_scrn(mode):
-
-	if mode == 0:
-		print("\x1B[2K")
-
-	elif mode == 1:
-		print("\x1B[2J")
-
-	else:
-		print("\x1B[2J")
-
 def parse_scripts(link):
 
 	HTML = urlopen(link)
@@ -83,7 +72,6 @@ def main(link):
 	
 	print(banner)
 	print(license)
-	clear_scrn(1)
 	try:
 		parse_scripts(link)
 		get_msg(link)
